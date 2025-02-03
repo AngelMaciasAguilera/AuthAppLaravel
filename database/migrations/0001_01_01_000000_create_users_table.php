@@ -24,7 +24,7 @@ return new class extends Migration
         });
 
         $user = new User;
-
+        $user->id = 1;
         $user->name = 'Superadmin';
         $user->email = 'zeus@theadmin.com';
         $user->password = '12345678910';

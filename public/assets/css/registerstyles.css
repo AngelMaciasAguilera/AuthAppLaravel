@@ -201,3 +201,27 @@ body {
         align-items: stretch;
     }
 }
+
+.alert-success{
+    background-color: rgba(1, 143, 1, 0.303);
+    color: green;
+    border-bottom: 2px solid rgb(0, 104, 0);
+    padding: 1rem;
+    font-size: 1.1rem;
+    border-top: 2px solid green;
+    margin-bottom: 2rem;
+}
+
+.alert-danger{
+    background-color: rgba(143, 1, 1, 0.303);
+    color: rgb(160, 0, 0);
+    border-bottom: 2px solid rgb(104, 0, 0);
+    padding: 1rem;
+    font-size: 1.1rem;
+    border-top: 2px solid rgb(168, 0, 0);
+    margin-bottom: 2rem;
+}
+
+
+
+
