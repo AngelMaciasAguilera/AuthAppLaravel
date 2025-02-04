@@ -19,7 +19,11 @@
                                 {{ $errors->first() }}
                             </div>
                         @endif
-
+                        @if ($user->email_verified_at == null)
+                            <div class="alert alert-danger" role="alert">
+                                verify your email!!
+                            </div>
+                        @endif
                         <form action="{{ route('users.update', [$user->id]) }}" method="POST">
                             @csrf
                             @method('PUT')
@@ -57,6 +61,11 @@
                                     @enderror
                                 </div>
                             </div>
+
+                            @if ($user->email_verified_at == null)
+                                <input type="checkbox" id="email_verified_at" name="email_verified_at" style="margin-bottom: 2rem">
+                                <label for="verfied">Verify this account now?</label>
+                            @endif
 
                             <div class="row mb-0">
                                 <div class="col-md-8 offset-md-4">

@@ -57,8 +57,12 @@
             <div>
                 <h3 class="float-md-start mb-0"> {{ config('app.name', 'Laravel') }}</h3>
                 <nav class="nav nav-masthead justify-content-center float-md-end">
-                    <a class="btn btn-primary" style="margin-right:2rem" href="{{ route('register') }}">Register</a>
-                    <a class="btn btn-primary" href="{{ route('login') }}">Login</a>
+                    @if(Auth::user() == null)
+                        <a class="btn btn-primary" style="margin-right:2rem" href="{{ route('register') }}">Register</a>
+                        <a class="btn btn-primary" href="{{ route('login') }}">Login</a>
+                    @else
+                        <a class="btn btn-primary" href="{{ route('home') }}">Home</a>
+                    @endif;
                 </nav>
             </div>
         </header>
